@@ -1,4 +1,4 @@
-var mogoose = require('mongoose'),
+var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var carroSchema = new Schema({

@@ -1,5 +1,5 @@
 const express = require ('express'),
-      rutas = express.Rutas(),
+      rutas = express.Router(),
       carro = require('../controller/controllerCarro.js');
 
 rutas.use('/carro', carro);

@@ -1,8 +1,8 @@
 var carro = require('../modelo/carro.js'),
     express = require('express'),
-    rutas = express.Rutas();
+    rutas = express.Router();
 
-rutas.get('/obtener',(req, res)=>{
+rutas.post('/obtener',(req, res)=>{
   carro.find({}, (error, docs)=>{
     if (error){
       console.error(error)
@@ -26,7 +26,7 @@ rutas.get('/obtener',(req, res)=>{
         }
         res.status(200).json(rest)
     })
-}).post('/sumar'),(req, res)=>{
+}).post('/sumar',(req, res)=>{
   var body=req.body;
 
   const num1 = parseInt(req.body.num1);
@@ -35,7 +35,7 @@ rutas.get('/obtener',(req, res)=>{
   const respuesta = (num1+num2);
 
   res.status(200).json(respuesta);
-}.post('/mayor'),(req, res)=>{
+}).post('/mayor',(req, res)=>{
   var body = req.body;
 
   const num1 = parseInt(req.body.num1);
@@ -46,12 +46,5 @@ rutas.get('/obtener',(req, res)=>{
   }else{
     res.status(200).json(num2);
   }
-}.post('/primos'),(req, res)=>{
-
-  var body = req.body;
-
-  const num1 = parseInt(req.body.num1);
-  if num1 = 
-
-}
+})
 module.exports = rutas;
