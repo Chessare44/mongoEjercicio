@@ -9,7 +9,6 @@ var carroSchema = new Schema({
   color:{type:String, trim:true},
   kilometraje:{type:Number, trim:true},
   placa:{type:String, trim:true},
-
 })
 
 var usuario = mongoose.model('carro', carroSchema);
